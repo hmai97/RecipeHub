@@ -17,7 +17,7 @@ const gettAllRecipes=async()=>{
 const getMyRecipes = async()=>{
   let user=JSON.parse(localStorage.getItem("user"))
   let allRecipes=await gettAllRecipes()
-  return allRecipes.filter(item=>item.createdBy===user.id)
+  return allRecipes.filter(item=>item.createdBy===user._id)
 }
 const router = createBrowserRouter([
   {path:"/",element:<MainNav/>,children:[

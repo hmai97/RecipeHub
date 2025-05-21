@@ -32,8 +32,7 @@ const addRecipe= async (req,res)=>{
     }
 
     const newRecipe = await Recipes.create(
-        {title,ingredients,instructions,time,image:req.file.filename,
-            createdBy:req.user.id
+        {title,ingredients,instructions,time,image:req.file.filename, createdBy:req.user.id
         }
 
     )
